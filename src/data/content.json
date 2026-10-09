@@ -2,7 +2,7 @@
   "siteSettings": {
     "tabTitle": "Martynas Mockapetris",
     "siteTitle": "Portfolio",
-    "kicker": "Full-Stack Developer & Designer",
+    "kicker": ["Hello, I am Martynas, a", "Full-Stack Developer & Designer"],
     "email": "marmocka@gmail.com",
     "headerImg": "headerbg3.jpg"
   },

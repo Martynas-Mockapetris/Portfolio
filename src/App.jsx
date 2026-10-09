@@ -1,12 +1,11 @@
+import Header from './components/Header';
+
 function App() {
   return (
     <div className="App">
       {/* Portfolio Sections will be built here */}
       
-      {/* Section 1: Header */}
-      <section id="header">
-        {/* <Header /> */}
-      </section>
+      <Header />
 
       {/* Section 2: About Me */}
       <section id="about-me">
