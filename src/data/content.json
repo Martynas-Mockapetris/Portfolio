@@ -7,8 +7,8 @@
     "headerImg": "headerbg3.jpg"
   },
   "seo": {
-    "description": "Martynas Mockapetris portfolio, web developer, programmer, designer, work gallery with contact form if any job offers inquires",
-    "author": "https://www.facebook.com/mockapetris.martynas"
+    "description": "Martynas Mockapetris - Full-Stack Web Developer & Designer. Specialized in React, Node.js, and creating responsive web solutions. Check out my portfolio projects and get in touch.",
+    "author": "https://www.linkedin.com/in/martynas-mockapetris/"
   },
   "navigation": [
     { "name": "About Me", "url": "#about-me" },
@@ -84,8 +84,30 @@
     }
   ],
   "socialLinks": {
-    "facebook": "https://www.facebook.com/mockapetris.martynas",
     "linkedin": "https://www.linkedin.com/in/martynas-mockapetris/",
-    "github": "https://github.com/Martynas-Mockapetris"
+    "github": "https://github.com/Martynas-Mockapetris",
+    "facebook": "https://www.facebook.com/mockapetris.martynas"
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind? Let's talk about it!",
+    "formFields": [
+      { "name": "fullName", "label": "Your Name", "type": "text", "placeholder": "Enter your full name", "required": true },
+      { "name": "email", "label": "Your Email", "type": "email", "placeholder": "Enter your email address", "required": true },
+      { "name": "message", "label": "Message", "type": "textarea", "placeholder": "Tell me about your project...", "required": true }
+    ],
+    "submitButtonText": "Send Message",
+    "successMessage": "Thank you! Your message has been sent successfully.",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "copyright": "© 2024 Martynas Mockapetris. All rights reserved.",
+    "quickLinks": [
+      { "name": "About Me", "url": "#about-me" },
+      { "name": "Work", "url": "#work" },
+      { "name": "Testimonials", "url": "#clients" },
+      { "name": "Contact", "url": "#contact" }
+    ],
+    "socialLinksLabel": "Connect With Me"
   }
 }
