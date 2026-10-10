@@ -1,20 +1,9 @@
-import { useState, useEffect } from 'react';
 import './Header.css';
 import { useSiteSettings, useNavigation } from '../hooks/useContent';
 
 export default function Header() {
   const siteSettings = useSiteSettings();
   const navigation = useNavigation();
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleScrollToSection = (url) => {
     const sectionId = url.substring(1);
@@ -26,16 +15,18 @@ export default function Header() {
   };
 
   return (
-    <header className={`header ${isSticky ? 'header--sticky' : 'header--hero'}`}>
+    <header className="header">
       <div className="header-container">
-        {/* Kicker */}
-        {Array.isArray(siteSettings.kicker) ?
+        {/* Left: Kicker */}
+        {Array.isArray(siteSettings.kicker) ? (
           <div className="kicker">
             {siteSettings.kicker.map((line, index) => (
               <div key={index}>{line}</div>
             ))}
           </div>
-        : <p className="kicker">{siteSettings.kicker}</p>}
+        ) : (
+          <p className="kicker">{siteSettings.kicker}</p>
+        )}
 
         {/* Middle: Navigation Links */}
         <nav className="header-nav">

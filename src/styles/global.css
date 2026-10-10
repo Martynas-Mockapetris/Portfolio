@@ -177,3 +177,28 @@ textarea:focus {
   background-color: var(--color-bg-dark);
   color: var(--color-bg-primary);
 }
+
+/* Section Utilities */
+.section {
+  min-height: 100vh;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section--dark {
+  background-color: var(--color-primary-darkest);
+  color: var(--color-bg-primary);
+}
+
+.section--light {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-primary-darkest);
+}

@@ -1,0 +1,115 @@
+/* AboutMe Section */
+.about-me {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-bg-secondary);
+}
+
+.section-container {
+  display: flex;
+  gap: var(--spacing-2xl);
+  align-items: flex-start;
+}
+
+/* Left: Avatar */
+.about-me-avatar {
+  flex: 0 0 300px;
+  min-width: 250px;
+}
+
+.avatar-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease;
+}
+
+.avatar-image:hover {
+  transform: scale(1.02);
+}
+
+/* Right: Content */
+.about-me-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.about-me-title {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary-darkest);
+  line-height: 1.2;
+}
+
+.about-me-blurb {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  text-align: justify;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-md);
+}
+
+.social-link {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary-dark);
+  color: var(--color-bg-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-primary-dark);
+}
+
+.social-link:hover {
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.social-link:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-me-avatar {
+    flex: 0 0 auto;
+    max-width: 250px;
+  }
+
+  .about-me-title {
+    font-size: 2rem;
+  }
+
+  .about-me-blurb {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

@@ -1,36 +1,28 @@
 import Header from './components/Header';
+import AboutMe from './components/AboutMe';
 
 function App() {
   return (
     <div className="App">
       {/* Portfolio Sections will be built here */}
-      
+
+      {/* Section 1: Header */}
       <Header />
 
       {/* Section 2: About Me */}
-      <section id="about-me">
-        {/* <AboutMe /> */}
-      </section>
+      <AboutMe />
 
       {/* Section 3: Work */}
-      <section id="work">
-        {/* <Work /> */}
-      </section>
+      <section id="work">{/* <Work /> */}</section>
 
       {/* Section 4: Testimonials */}
-      <section id="clients">
-        {/* <Testimonials /> */}
-      </section>
+      <section id="clients">{/* <Testimonials /> */}</section>
 
       {/* Section 5: Contact */}
-      <section id="contact">
-        {/* <Contact /> */}
-      </section>
+      <section id="contact">{/* <Contact /> */}</section>
 
       {/* Section 6: Footer */}
-      <section id="footer">
-        {/* <Footer /> */}
-      </section>
+      <section id="footer">{/* <Footer /> */}</section>
     </div>
   );
 }
