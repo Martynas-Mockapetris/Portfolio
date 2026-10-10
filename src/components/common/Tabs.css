@@ -1,0 +1,78 @@
+.tabs {
+  width: 100%;
+  margin-top: var(--spacing-xl);
+}
+
+/* Tab Buttons */
+.tabs-buttons {
+  display: flex;
+  gap: 0;
+  width: 100%;
+}
+
+.tab-button {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: none;
+  border: none;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Animated underline using ::after pseudo-element */
+.tab-button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary-dark);
+  transition: width 0.4s ease;
+}
+
+.tab-button:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.tab-button--active {
+  color: var(--color-primary-dark);
+}
+
+.tab-button--active::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+/* Tab Content */
+.tabs-content {
+  padding: var(--spacing-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Override global button styles */
+.tab-button {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.tab-button:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.tab-button:active {
+  transform: none !important;
+}

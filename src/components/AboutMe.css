@@ -1,13 +1,26 @@
 /* AboutMe Section */
-.about-me {
-  padding: var(--spacing-2xl) var(--spacing-lg);
-  background-color: var(--color-bg-secondary);
-}
-
-.section-container {
+.about-me-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   gap: var(--spacing-2xl);
   align-items: flex-start;
+  width: 100%;
+}
+
+/* Override section flex for AboutMe to stack vertically */
+#about-me {
+  flex-direction: column;
+}
+
+#about-me .about-me-container {
+  width: 100%;
+  flex-direction: row;
+}
+
+#about-me .about-me-skills {
+  width: 100%;
+  margin-top: var(--spacing-2xl);
 }
 
 /* Left: Avatar */
@@ -29,9 +42,36 @@
   transform: scale(1.02);
 }
 
-/* Right: Content */
-.about-me-content {
+/* Right: Content and Skills */
+.about-me-right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Skills Section - Full Width */
+.about-me-skills {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skills-title {
+  margin: 0 0 var(--spacing-2xl) 0;
+  padding: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary-darkest);
+  line-height: 1.2;
+}
+
+.skills-list {
+  margin-top: calc(var(--spacing-2xl) * 1.5);
+}
+
+/* Bio Content */
+.about-me-content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -86,6 +126,67 @@
   transform: translateY(0);
 }
 
+/* Skills List */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-2xl);
+  justify-items: stretch;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.skill-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--color-primary-darkest);
+  font-size: 1.1rem;
+}
+
+.skill-value {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.skill-dots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skill-dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 5px solid var(--color-primary-lightest);
+  background-color: transparent;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.skill-dot--filled {
+  border-color: var(--color-primary-dark);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-me-container {
@@ -100,6 +201,10 @@
     max-width: 250px;
   }
 
+  .about-me-right {
+    width: 100%;
+  }
+
   .about-me-title {
     font-size: 2rem;
   }
@@ -111,5 +216,13 @@
 
   .social-links {
     justify-content: center;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item:last-child:nth-child(odd) {
+    max-width: 100%;
   }
 }
