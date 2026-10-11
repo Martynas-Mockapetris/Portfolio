@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
+import Work from './components/Work';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <AboutMe />
 
       {/* Section 3: Work */}
-      <section id="work">{/* <Work /> */}</section>
+      <Work />
 
       {/* Section 4: Testimonials */}
       <section id="clients">{/* <Testimonials /> */}</section>
