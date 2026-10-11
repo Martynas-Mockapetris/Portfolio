@@ -5,7 +5,7 @@ export default function Work() {
   const projects = useProjects();
 
   return (
-    <section id="work" className="section section--dark">
+    <section id="work" className="section section--primary-lightest">
       <div className="work-container">
         <h2 className="work-title">My Work</h2>
         

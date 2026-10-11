@@ -206,3 +206,13 @@ textarea:focus {
   background-color: var(--color-bg-secondary);
   color: var(--color-primary-darkest);
 }
+
+.section--primary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-darkest);
+}
+
+.section--primary-lightest {
+  background-color: var(--color-primary-lightest);
+  color: var(--color-primary-darkest);
+}
