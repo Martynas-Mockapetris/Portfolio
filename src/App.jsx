@@ -1,10 +1,14 @@
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Work from './components/Work';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <div className="App">
+      {/* Sticky Navigation (appears after Header) */}
+      <Navigation />
+
       {/* Portfolio Sections will be built here */}
 
       {/* Section 1: Header */}

@@ -1,0 +1,88 @@
+/* Sticky Navigation */
+.sticky-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-primary-darkest);
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sticky-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sticky-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--spacing-2xl);
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky-nav-link {
+  color: var(--color-bg-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding: var(--spacing-sm) 0;
+  transition: color 0.3s ease;
+}
+
+.sticky-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary-light);
+  transition: width 0.3s ease;
+}
+
+.sticky-nav-link:hover {
+  color: var(--color-primary-light);
+}
+
+.sticky-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sticky-nav-container {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .sticky-nav-links {
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  .sticky-nav-link {
+    font-size: 0.85rem;
+    padding: var(--spacing-xs) 0;
+  }
+}

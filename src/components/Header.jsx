@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
+    <header id="header" className="header">
       <div className="header-container">
         {/* Left: Kicker */}
         {Array.isArray(siteSettings.kicker) ? (
