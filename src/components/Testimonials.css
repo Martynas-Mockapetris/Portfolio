@@ -58,11 +58,11 @@
 }
 
 .testimonial-card--next {
-  animation: fadeSlideInRight 0.5s ease-in-out forwards;
+  animation: fadeSlideInRight 1s ease-in-out forwards;
 }
 
 .testimonial-card--prev {
-  animation: fadeSlideInLeft 0.5s ease-in-out forwards;
+  animation: fadeSlideInLeft 1s ease-in-out forwards;
 }
 
 @keyframes fadeSlideInRight {
