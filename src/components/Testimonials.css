@@ -57,6 +57,36 @@
   min-height: 500px;
 }
 
+.testimonial-card--next {
+  animation: fadeSlideInRight 0.5s ease-in-out forwards;
+}
+
+.testimonial-card--prev {
+  animation: fadeSlideInLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Testimonial Avatar */
 .testimonial-avatar {
   flex-shrink: 0;

@@ -31,14 +31,17 @@ const logoMap = {
 export default function Testimonials() {
   const testimonials = useTestimonials();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState('next');
 
   const goToPrevious = () => {
+    setDirection('prev');
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
+    setDirection('next');
     setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
@@ -60,7 +63,7 @@ export default function Testimonials() {
             &#10094;
           </button>
 
-          <div className="testimonial-card">
+          <div className={`testimonial-card testimonial-card--${direction}`} key={currentIndex}>
             <div className="testimonial-avatar">
               <img 
                 src={avatarSrc}
