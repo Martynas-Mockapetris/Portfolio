@@ -2,6 +2,7 @@ import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Work from './components/Work';
 import Navigation from './components/Navigation';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Work />
 
       {/* Section 4: Testimonials */}
-      <section id="clients">{/* <Testimonials /> */}</section>
+      <Testimonials />
 
       {/* Section 5: Contact */}
       <section id="contact">{/* <Contact /> */}</section>
