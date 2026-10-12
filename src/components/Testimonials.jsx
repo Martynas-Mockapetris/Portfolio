@@ -46,7 +46,10 @@ export default function Testimonials() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      goToNext();
+      setDirection('next');
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
     }, 15000);
 
     return () => clearInterval(interval);
