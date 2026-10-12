@@ -1,11 +1,13 @@
 import './Work.css';
 import { useProjects } from '../hooks/useContent';
+import sectionIMG2 from '../assets/Sections/sectionIMG2.png';
 
 export default function Work() {
   const projects = useProjects();
 
   return (
     <section id="work" className="section section--primary-lightest">
+      <img src={sectionIMG2} alt="Section decoration" className="section-decoration section-decoration--right section-decoration-2" />
       <div className="work-container">
         <h2 className="work-title">My Work</h2>
         

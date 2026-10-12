@@ -1,6 +1,7 @@
 import './AboutMe.css';
 import Tabs from './common/Tabs';
 import { useAboutMe, useSocialLinks, useSkills } from '../hooks/useContent';
+import sectionIMG from '../assets/Sections/sectionIMG.png';
 
 export default function AboutMe() {
   const aboutMe = useAboutMe();
@@ -11,6 +12,7 @@ export default function AboutMe() {
 
   return (
     <section id="about-me" className="section section--light">
+      <img src={sectionIMG} alt="Section decoration" className="section-decoration section-decoration--left section-decoration-1" />
       <div className="about-me-container">
         {/* Left: Avatar */}
         <div className="about-me-avatar">

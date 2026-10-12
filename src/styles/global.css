@@ -189,6 +189,36 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.section-decoration {
+  position: absolute;
+  opacity: 0.05;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+/* Different sizes for each decoration */
+.section-decoration-1 {
+  width: 880px;
+  height: 880px;
+  top: 15%;
+  right: 20px;
+}
+
+.section-decoration-2 {
+  width: 880px;
+  height: 880px;
+  top: 5%;
+  left: 50px;
+}
+
+.section-decoration-3 {
+  width: 880px;
+  height: 880px;
+  top: 28%;
+  right: 20px;
 }
 
 .section-container {

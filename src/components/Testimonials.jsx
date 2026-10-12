@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Testimonials.css';
 import { useTestimonials } from '../hooks/useContent';
+import sectionIMG3 from '../assets/Sections/sectionIMG3.png';
 
 // Import testimonial images
 import DianaF from '../assets/Testimonials/DianaF.jpg';
@@ -59,6 +60,7 @@ export default function Testimonials() {
 
   return (
     <section id="clients" className="section section--light">
+      <img src={sectionIMG3} alt="Section decoration" className="section-decoration section-decoration--left section-decoration-3" />
       <div className="testimonials-container">
         <h2 className="testimonials-title">What People Say</h2>
 
