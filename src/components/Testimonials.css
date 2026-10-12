@@ -261,7 +261,6 @@
   .testimonial-footer {
     flex-direction: column;
     gap: var(--spacing-md);
-    border-top: none;
     border-top: 1px solid #e0e0e0;
   }
 }
