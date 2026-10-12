@@ -35,26 +35,13 @@
 
 /* Carousel Buttons */
 .carousel-button {
-  background-color: transparent !important;
+  background: none;
   border: none;
   font-size: 2rem;
   color: var(--color-primary-dark);
   cursor: pointer;
   padding: var(--spacing-md);
   flex-shrink: 0;
-  box-shadow: none !important;
-  transition: none;
-}
-
-.carousel-button:hover {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  transform: none !important;
-  color: var(--color-primary-dark);
-}
-
-.carousel-button:active {
-  transform: none !important;
 }
 
 /* Testimonial Card */
@@ -65,9 +52,9 @@
   box-shadow: var(--shadow-lg);
   display: flex;
   gap: var(--spacing-2xl);
-  align-items: flex-start;
+  align-items: stretch;
   flex: 1;
-  min-height: 350px;
+  min-height: 480px;
 }
 
 /* Testimonial Avatar */
@@ -93,7 +80,7 @@
 }
 
 .testimonial-quote {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: var(--color-text-secondary);
   margin: 0;
@@ -113,6 +100,9 @@
 
 .testimonial-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .testimonial-name {
@@ -134,11 +124,16 @@
 /* Logo */
 .testimonial-logo {
   flex-shrink: 0;
+  width: 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-image {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
 
@@ -211,4 +206,3 @@
     border-top: 1px solid #e0e0e0;
   }
 }
-

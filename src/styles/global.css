@@ -109,8 +109,8 @@ a:hover {
   color: var(--color-primary-darkest);
 }
 
-/* Buttons - Default Style */
-button {
+/* Button Utility Class - For action buttons only */
+.btn {
   background-color: var(--color-primary-dark);
   color: var(--color-bg-primary);
   border: none;
@@ -123,17 +123,17 @@ button {
   box-shadow: var(--shadow-sm);
 }
 
-button:hover {
+.btn:hover {
   background-color: var(--color-primary-darkest);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
-button:active {
+.btn:active {
   transform: translateY(0);
 }
 
-button:disabled {
+.btn:disabled {
   background-color: var(--color-primary-light);
   cursor: not-allowed;
   opacity: 0.6;
