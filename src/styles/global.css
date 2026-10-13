@@ -190,6 +190,7 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 .section-decoration {
@@ -219,6 +220,13 @@ textarea:focus {
   height: 880px;
   top: 28%;
   right: 20px;
+}
+
+.section-decoration-4 {
+  width: 800px;
+  height: 800px;
+  top: 10%;
+  left: 200px;
 }
 
 .section-container {
