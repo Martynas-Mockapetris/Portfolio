@@ -1,0 +1,70 @@
+/* IconButton Component */
+
+/* Base Styles */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+/* Icon Variant - Circular */
+.icon-button--icon {
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button--icon:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-primary-light);
+  color: white;
+}
+
+.icon-button--icon:active {
+  transform: scale(0.95);
+}
+
+/* Text Variant - Button Style */
+.icon-button--text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary-dark);
+  color: var(--color-bg-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-primary-dark);
+}
+
+.icon-button--text:hover {
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.icon-button--text:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .icon-button--icon {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -2,6 +2,7 @@ import './Contact.css';
 import { useState } from 'react';
 import { useSocialLinks } from '../hooks/useContent';
 import sectionIMG4 from '../assets/Sections/sectionIMG4.png';
+import IconButton from './common/IconButton';
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const iconMap = {
@@ -125,9 +126,14 @@ const Contact = () => {
             {Object.entries(socialLinks).map(([platform, url]) => {
               const IconComponent = iconMap[platform];
               return (
-                <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className="social-link-icon" title={platform}>
-                  {IconComponent && <IconComponent size={24} />}
-                </a>
+                <IconButton 
+                  key={platform}
+                  icon={IconComponent}
+                  href={url}
+                  title={platform}
+                  size={24}
+                  variant="icon"
+                />
               );
             })}
           </div>

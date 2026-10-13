@@ -1,7 +1,15 @@
-import './AboutMe.css';
 import Tabs from './common/Tabs';
+import IconButton from './common/IconButton';
+import './AboutMe.css';
 import { useAboutMe, useSocialLinks, useSkills } from '../hooks/useContent';
 import sectionIMG from '../assets/Sections/sectionIMG.png';
+import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+
+const iconMap = {
+  facebook: FaFacebook,
+  linkedin: FaLinkedin,
+  github: FaGithub
+};
 
 export default function AboutMe() {
   const aboutMe = useAboutMe();
@@ -16,7 +24,7 @@ export default function AboutMe() {
       <div className="about-me-container">
         {/* Left: Avatar */}
         <div className="about-me-avatar">
-          <img src={`/Portfolio/src/assets/${aboutMe.avatar}`} alt="Martynas Avatar" className="avatar-image" />
+          <img src={`/Portfolio/src/assets/${aboutMe.avatar}`} alt="Martynas Avatar" className="about-me-avatar-image" />
         </div>
 
         {/* Right: Bio and Social Links */}
@@ -27,11 +35,19 @@ export default function AboutMe() {
 
             {/* Social Links */}
             <div className="social-links">
-              {Object.entries(socialLinks).map(([platform, url]) => (
-                <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className="social-link" title={platform}>
-                  {platform.charAt(0).toUpperCase() + platform.slice(1)}
-                </a>
-              ))}
+              {Object.entries(socialLinks).map(([platform, url]) => {
+                const IconComponent = iconMap[platform];
+                return (
+                  <IconButton 
+                    key={platform}
+                    icon={IconComponent}
+                    href={url}
+                    title={platform}
+                    size={24}
+                    variant="icon"
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
