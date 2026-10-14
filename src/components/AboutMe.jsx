@@ -22,34 +22,52 @@ export default function AboutMe() {
     <section id="about-me" className="section section--light">
       <img src={sectionIMG} alt="Section decoration" className="section-decoration section-decoration--left section-decoration-1" />
       <div className="about-me-container">
-        {/* Left: Avatar */}
+        {/* Title */}
+        <h2 className="about-me-title">About Me</h2>
+
+        {/* Avatar */}
         <div className="about-me-avatar">
           <img src={`/Portfolio/src/assets/${aboutMe.avatar}`} alt="Martynas Avatar" className="about-me-avatar-image" />
         </div>
 
-        {/* Right: Bio and Social Links */}
-        <div className="about-me-right">
-          <div className="about-me-content">
-            <h2 className="about-me-title">About Me</h2>
-            <p className="about-me-blurb">{aboutMe.blurb}</p>
+        {/* Description Container (for desktop layout) */}
+        <div className="about-me-description-wrapper">
+          {/* Description */}
+          <p className="about-me-blurb">{aboutMe.blurb}</p>
 
-            {/* Social Links */}
-            <div className="social-links">
-              {Object.entries(socialLinks).map(([platform, url]) => {
-                const IconComponent = iconMap[platform];
-                return (
-                  <IconButton 
-                    key={platform}
-                    icon={IconComponent}
-                    href={url}
-                    title={platform}
-                    size={24}
-                    variant="icon"
-                  />
-                );
-              })}
-            </div>
+          {/* Social Links - Desktop Version (inside description) */}
+          <div className="social-links social-links--desktop">
+            {Object.entries(socialLinks).map(([platform, url]) => {
+              const IconComponent = iconMap[platform];
+              return (
+                <IconButton 
+                  key={platform}
+                  icon={IconComponent}
+                  href={url}
+                  title={platform}
+                  size={24}
+                  variant="icon"
+                />
+              );
+            })}
           </div>
+        </div>
+
+        {/* Social Links - Mobile Version (after description) */}
+        <div className="social-links social-links--mobile">
+          {Object.entries(socialLinks).map(([platform, url]) => {
+            const IconComponent = iconMap[platform];
+            return (
+              <IconButton 
+                key={platform}
+                icon={IconComponent}
+                href={url}
+                title={platform}
+                size={24}
+                variant="icon"
+              />
+            );
+          })}
         </div>
       </div>
 

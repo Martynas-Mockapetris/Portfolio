@@ -79,6 +79,27 @@
 }
 
 /* Responsive Design */
+/* Medium Screens (tablets/laptops): Reduce content by 30% */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .header {
+    padding: calc(var(--spacing-xl) * 0.7) var(--spacing-lg);
+  }
+
+  .kicker {
+    font-size: 2.1rem;
+  }
+
+  .header-nav {
+    gap: calc(var(--spacing-xl) * 0.7);
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+/* Mobile Screens */
 @media (max-width: 768px) {
   .header {
     min-height: 100vh;

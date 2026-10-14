@@ -89,12 +89,24 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+/* Medium Screens (tablets/laptops): Reduce content by 30% */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .work-container {
+    padding: 0 var(--spacing-lg);
+  }
+
+  .work-title {
+    font-size: 2rem;
+    margin-bottom: calc(var(--spacing-2xl) * 0.7);
+  }
+
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
 }
 
+/* Mobile Screens */
 @media (max-width: 768px) {
   .work-container {
     padding: 0 var(--spacing-lg);

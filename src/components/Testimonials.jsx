@@ -67,8 +67,18 @@ export default function Testimonials() {
       <div className="testimonials-container">
         <h2 className="testimonials-title">What People Say</h2>
 
-        <div className="testimonials-carousel">
+        {/* Mobile Navigation - Appears below title on mobile */}
+        <div className="testimonials-nav-mobile">
           <button className="carousel-button carousel-button--prev" onClick={goToPrevious}>
+            &#10094;
+          </button>
+          <button className="carousel-button carousel-button--next" onClick={goToNext}>
+            &#10095;
+          </button>
+        </div>
+
+        <div className="testimonials-carousel">
+          <button className="carousel-button carousel-button--prev carousel-button--desktop" onClick={goToPrevious}>
             &#10094;
           </button>
 
@@ -111,7 +121,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <button className="carousel-button carousel-button--next" onClick={goToNext}>
+          <button className="carousel-button carousel-button--next carousel-button--desktop" onClick={goToNext}>
             &#10095;
           </button>
         </div>

@@ -29,8 +29,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Left: Copyright + Social Icons */}
-        <div className="footer-section footer-left">
+        {/* Desktop Left: Copyright + Social Icons */}
+        <div className="footer-section footer-left footer-left--desktop">
           <div className="footer-left-content">
             <p className="footer-copyright">
               © {currentYear} Martynas Mockapetris. All rights reserved.
@@ -55,8 +55,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right: Menu Links + Scroll to Top */}
-        <div className="footer-section footer-right">
+        {/* Desktop Right: Menu Links + Scroll to Top */}
+        <div className="footer-section footer-right footer-right--desktop">
           <nav className="footer-nav">
             {navigationLinks.map((link) => (
               <a 
@@ -70,6 +70,44 @@ export default function Footer() {
             ))}
           </nav>
         </div>
+
+        {/* Mobile: Nav Links First */}
+        <nav className="footer-nav footer-nav--mobile">
+          {navigationLinks.map((link) => (
+            <a 
+              key={link.name} 
+              href={link.url} 
+              className="footer-nav-link footer-nav-link--mobile"
+              onClick={(e) => link.isTop ? (e.preventDefault(), scrollToTop()) : null}
+            >
+              {link.name}
+            </a>
+          ))}
+        </nav>
+
+        {/* Mobile: Social Links Second */}
+        <div className="footer-social-links footer-social-links--mobile">
+          {Object.entries(socialLinks).map(([platform, url]) => {
+            const IconComponent = iconMap[platform];
+            return (
+              <a
+                key={platform}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-icon"
+                title={platform}
+              >
+                {IconComponent && <IconComponent size={24} />}
+              </a>
+            );
+          })}
+        </div>
+
+        {/* Mobile: Copyright Last */}
+        <p className="footer-copyright footer-copyright--mobile">
+          © {currentYear} Martynas Mockapetris. All rights reserved.
+        </p>
       </div>
     </footer>
   );
