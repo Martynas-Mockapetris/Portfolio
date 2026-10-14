@@ -3,7 +3,6 @@
     "tabTitle": "Martynas Mockapetris",
     "siteTitle": "Portfolio",
     "kicker": ["Hello, I am Martynas, a", "Full-Stack Developer & Designer"],
-    "email": "marmocka@gmail.com",
     "headerImg": "headerbg3.jpg"
   },
   "seo": {
@@ -50,7 +49,7 @@
     { "name": "TMDB", "folder": "work-4" },
     { "name": "WalletPatrol", "folder": "work-5" },
     { "name": "VCS-Baigiamasis", "folder": "work-6" },
-    { "name": "Smoothie", "folder": "work-7" },
+    { "name": "KP Website", "folder": "work-7" },
     { "name": "Portfolio v0.9", "folder": "work-8" },
     { "name": "Personal Portfolio", "folder": "work-9" }
   ],

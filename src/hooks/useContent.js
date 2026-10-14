@@ -91,10 +91,28 @@ export function useContact() {
 }
 
 /**
+ * Hook to access contact data (alias for useContact)
+ *
+ * @returns {Object} Contact section data
+ */
+export function useContactData() {
+  return content.contact;
+}
+
+/**
  * Hook to access footer section data
  *
  * @returns {Object} Footer data (copyright, links, etc.)
  */
 export function useFooter() {
+  return content.footer;
+}
+
+/**
+ * Hook to access footer data (alias for useFooter)
+ *
+ * @returns {Object} Footer data
+ */
+export function useFooterData() {
   return content.footer;
 }

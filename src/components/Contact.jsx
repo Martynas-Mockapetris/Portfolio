@@ -1,6 +1,6 @@
 import './Contact.css';
 import { useState } from 'react';
-import { useSocialLinks } from '../hooks/useContent';
+import { useSocialLinks, useContactData } from '../hooks/useContent';
 import sectionIMG4 from '../assets/Sections/sectionIMG4.png';
 import IconButton from './common/IconButton';
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
@@ -13,6 +13,7 @@ const iconMap = {
 
 const Contact = () => {
   const socialLinks = useSocialLinks();
+  const contactData = useContactData();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -89,7 +90,8 @@ const Contact = () => {
     <section id="contact" className="section section--light">
       <img src={sectionIMG4} alt="Section decoration" className="section-decoration section-decoration--right section-decoration-4" />
       <div className="contact-container">
-        <h2 className="contact-title">Get In Touch</h2>
+        <h2 className="contact-title">{contactData.title}</h2>
+        <p className="contact-subtitle">{contactData.subtitle}</p>
 
         {/* Contact Form */}
         <form className="contact-form" onSubmit={handleSubmit}>

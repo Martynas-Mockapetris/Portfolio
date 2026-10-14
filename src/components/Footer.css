@@ -53,6 +53,20 @@
   display: none;
 }
 
+.footer-social-section {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.footer-social-label {
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+  color: var(--color-bg-primary);
+  white-space: nowrap;
+}
+
 .footer-social-links {
   display: flex;
   gap: var(--spacing-md);
@@ -187,6 +201,11 @@
     gap: var(--spacing-lg);
     order: 2;
     width: 100%;
+  }
+
+  /* Hide social label on mobile */
+  .footer-social-label {
+    display: none;
   }
 
   /* Copyright Last */
