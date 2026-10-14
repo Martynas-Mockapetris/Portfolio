@@ -2,6 +2,13 @@ import './Work.css';
 import { useProjects } from '../hooks/useContent';
 import sectionIMG2 from '../assets/Sections/sectionIMG2.png';
 
+const thumbnailModules = import.meta.glob('../assets/Work/*/thumb.png', { eager: true });
+
+const getThumbnailSrc = (folder) => {
+  const path = `../assets/Work/${folder}/thumb.png`;
+  return thumbnailModules[path]?.default || '';
+};
+
 export default function Work() {
   const projects = useProjects();
 
@@ -13,15 +20,16 @@ export default function Work() {
         
         <div className="work-grid">
           {projects.map((project) => (
-            <div key={project.folder} className="work-card">
+            <div key={project.id} className="work-card">
               <a href={`#${project.folder}`} className="work-card-link">
                 <img 
-                  src={`/Portfolio/src/assets/thumb.jpg`} 
+                  src={getThumbnailSrc(project.folder)}
                   alt={project.name}
                   className="work-card-image"
                 />
                 <div className="work-card-overlay">
                   <h3 className="work-card-title">{project.name}</h3>
+                  <p className="work-card-desc">{project.shortDesc}</p>
                 </div>
               </a>
             </div>

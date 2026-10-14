@@ -1,4 +1,5 @@
 import content from '../data/content.json';
+import workData from '../data/work.json';
 
 /**
  * Custom hook to access ALL portfolio content
@@ -60,7 +61,7 @@ export function useAllSkills() {
  * @returns {Array} Array of all projects
  */
 export function useProjects() {
-  return content.projects;
+  return workData.projects;
 }
 
 /**

@@ -42,17 +42,6 @@
       { "name": "Database Design", "value": 7 }
     ]
   },
-  "projects": [
-    { "name": "Project - Eurotech", "folder": "work-1" },
-    { "name": "SkillBridge", "folder": "work-2" },
-    { "name": "Manaus-Hotel", "folder": "work-3" },
-    { "name": "TMDB", "folder": "work-4" },
-    { "name": "WalletPatrol", "folder": "work-5" },
-    { "name": "VCS-Baigiamasis", "folder": "work-6" },
-    { "name": "KP Website", "folder": "work-7" },
-    { "name": "Portfolio v0.9", "folder": "work-8" },
-    { "name": "Personal Portfolio", "folder": "work-9" }
-  ],
   "testimonials": [
     {
       "avatar": "DianaF.jpg",
