@@ -2,10 +2,10 @@ import './Work.css';
 import { useProjects } from '../hooks/useContent';
 import sectionIMG2 from '../assets/Sections/sectionIMG2.png';
 
-const thumbnailModules = import.meta.glob('../assets/Work/*/thumb.png', { eager: true });
+const thumbnailModules = import.meta.glob('../assets/Work/**/*.{jpg,png}', { eager: true });
 
-const getThumbnailSrc = (folder) => {
-  const path = `../assets/Work/${folder}/thumb.png`;
+const getThumbnailSrc = (folder, filename) => {
+  const path = `../assets/Work/${folder}/${filename}`;
   return thumbnailModules[path]?.default || '';
 };
 
@@ -23,7 +23,7 @@ export default function Work() {
             <div key={project.id} className="work-card">
               <a href={`#${project.folder}`} className="work-card-link">
                 <img 
-                  src={getThumbnailSrc(project.folder)}
+                  src={getThumbnailSrc(project.folder, project.thumbnail)}
                   alt={project.name}
                   className="work-card-image"
                 />

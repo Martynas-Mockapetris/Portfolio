@@ -5,63 +5,108 @@
       "name": "Project - Eurotech",
       "folder": "work-1",
       "shortDesc": "Enterprise technology solution for business optimization",
-      "thumbnail": "thumb.jpg"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"]
     },
     {
       "id": "work-2",
       "name": "SkillBridge",
       "folder": "work-2",
       "shortDesc": "E-learning platform connecting students with mentors",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     },
     {
       "id": "work-3",
       "name": "Manaus-Hotel",
       "folder": "work-3",
       "shortDesc": "Hotel booking and management system for Manaus hospitality",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     },
     {
       "id": "work-4",
       "name": "TMDB",
       "folder": "work-4",
       "shortDesc": "Movie database application with advanced search and filtering",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     },
     {
       "id": "work-5",
       "name": "WalletPatrol",
       "folder": "work-5",
       "shortDesc": "Personal finance management and expense tracking application",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     },
     {
       "id": "work-6",
       "name": "VCS-Baigiamasis",
       "folder": "work-6",
       "shortDesc": "Version control system thesis project with collaborative features",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     },
     {
       "id": "work-7",
       "name": "KP Website",
       "folder": "work-7",
       "shortDesc": "Modern corporate website for business presence and lead generation",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     },
     {
       "id": "work-8",
       "name": "Portfolio v0.9",
       "folder": "work-8",
       "shortDesc": "Previous portfolio version showcasing earlier design evolution",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     },
     {
       "id": "work-9",
       "name": "Personal Portfolio",
       "folder": "work-9",
       "shortDesc": "Current React-based portfolio with modern architecture and design",
-      "thumbnail": "thumb.png"
+      "thumbnail": "thumb.png",
+      "description": "Description",
+      "techstack": "Techstack",
+      "challenge": "Challenge",
+      "results": "Results",
+      "gallery": ["1.png", "2.png", "3.png"]
     }
   ]
 }
