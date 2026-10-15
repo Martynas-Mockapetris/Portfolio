@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './WorkDetail.css';
 
 const galleryModules = import.meta.glob('../assets/Work/**/*.{jpg,png}', { eager: true });
@@ -8,9 +9,18 @@ const getGalleryImage = (folder, filename) => {
 };
 
 export default function WorkDetail({ project, onBack }) {
+  const [isClosing, setIsClosing] = useState(false);
+
   if (!project) return null;
 
   const images = project.gallery || [];
+
+  const handleBackClick = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      onBack();
+    }, 400); // Match the fade-out animation duration
+  };
 
   const scrollToTop = () => {
     const workSection = document.getElementById('work');
@@ -23,10 +33,10 @@ export default function WorkDetail({ project, onBack }) {
   };
 
   return (
-    <div className="work-detail">
+    <div className={`work-detail ${isClosing ? 'work-detail--closing' : ''}`}>
       {/* Title with back button */}
       <div className="work-detail-header">
-        <button className="work-detail-back" onClick={onBack} aria-label="Back to gallery" title="Back to gallery">
+        <button className="work-detail-back" onClick={handleBackClick} aria-label="Back to gallery" title="Back to gallery">
           <svg version="1.1" viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg">
             <path d="M45.9,55.9c-0.4,0.4-0.9,0.6-1.4,0.6s-1-0.2-1.4-0.6L26.1,39c-0.8-0.8-0.8-2,0-2.8l16.1-16.1 c0.8-0.8,2.1-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L30.4,37.6l15.5,15.5C46.6,53.9,46.6,55.1,45.9,55.9z M76,38c0,21-17,38-38,38 S0,59,0,38S17,0,38,0S76,17,76,38z M72,38C72,19.2,56.8,4,38,4S4,19.2,4,38s15.2,34,34,34S72,56.8,72,38z"/>
           </svg>

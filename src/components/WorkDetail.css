@@ -2,13 +2,13 @@
 .work-detail {
   position: relative;
   z-index: 1;
+  background: var(--color-bg-secondary);
   max-width: 90%;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2xl);
   padding: var(--spacing-2xl);
-  background: var(--color-bg-secondary);
   animation: fadeInDetail 0.5s ease-out;
 }
 
@@ -19,6 +19,23 @@
   to {
     opacity: 1;
   }
+}
+
+@keyframes fadeOutDetail {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.work-detail {
+  animation: fadeInDetail 0.6s ease-out;
+}
+
+.work-detail--closing {
+  animation: fadeOutDetail 0.4s ease-out forwards;
 }
 
 /* Header with Title and Back Button */

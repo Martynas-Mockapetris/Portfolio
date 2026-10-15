@@ -37,6 +37,48 @@
   aspect-ratio: 16/9;
   overflow: hidden;
   cursor: pointer;
+  animation: slideInCard 0.5s ease-in forwards;
+  opacity: 0;
+}
+
+/* Staggered animation for each card */
+.work-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.work-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.work-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.work-card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.work-card:nth-child(5) {
+  animation-delay: 0.75s;
+}
+.work-card:nth-child(6) {
+  animation-delay: 0.9s;
+}
+.work-card:nth-child(7) {
+  animation-delay: 1.05s;
+}
+.work-card:nth-child(8) {
+  animation-delay: 1.2s;
+}
+.work-card:nth-child(9) {
+  animation-delay: 1.35s;
+}
+
+@keyframes slideInCard {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .work-card-link {
