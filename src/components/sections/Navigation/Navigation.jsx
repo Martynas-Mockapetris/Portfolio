@@ -1,11 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './Navigation.css';
-import { useNavigation } from '../hooks/useContent';
+import { useNavigation } from '../../../hooks/useContent';
 
 export default function Navigation() {
   const [isVisible, setIsVisible] = useState(false);
-  const headerRef = useRef(null);
-
   const navigation = useNavigation();
 
   useEffect(() => {
@@ -47,3 +45,4 @@ export default function Navigation() {
     </nav>
   );
 }
+

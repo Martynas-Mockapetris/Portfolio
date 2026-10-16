@@ -159,18 +159,6 @@
   flex-wrap: wrap;
 }
 
-.contact-container {
-  .icon-button--icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  .icon-button--icon svg {
-    width: 50%;
-    height: 50%;
-  }
-}
-
 .icon-button--icon {
   width: 70px;
   height: 70px;

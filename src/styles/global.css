@@ -160,28 +160,6 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(82, 109, 130, 0.1);
 }
 
-/* Utility Classes */
-.text-primary {
-  color: var(--color-text-primary);
-}
-
-.text-secondary {
-  color: var(--color-text-secondary);
-}
-
-.text-muted {
-  color: var(--color-text-muted);
-}
-
-.bg-light {
-  background-color: var(--color-bg-secondary);
-}
-
-.bg-dark {
-  background-color: var(--color-bg-dark);
-  color: var(--color-bg-primary);
-}
-
 /* Section Utilities */
 .section {
   min-height: 100vh;
@@ -204,53 +182,39 @@ textarea:focus {
 .section-decoration-1 {
   width: 880px;
   height: 880px;
-  top: 15%;
+  top: 15vh;
   right: 20px;
 }
 
 .section-decoration-2 {
   width: 880px;
   height: 880px;
-  top: 5%;
+  top: 5vh;
   left: 50px;
 }
 
 .section-decoration-3 {
   width: 880px;
   height: 880px;
-  top: 28%;
+  top: 28vh;
   right: 20px;
 }
 
 .section-decoration-4 {
   width: 800px;
   height: 800px;
-  top: 10%;
+  top: 10vh;
   left: 200px;
 }
 
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.section--dark {
-  background-color: var(--color-primary-darkest);
-  color: var(--color-bg-primary);
+.section-decoration-5 {
+  width: 1000px;
+  height: 1000px;
+  top: -15vh;
+  left: 20px;
 }
 
 .section--light {
   background-color: var(--color-bg-secondary);
-  color: var(--color-primary-darkest);
-}
-
-.section--primary {
-  background-color: var(--color-primary-light);
-  color: var(--color-primary-darkest);
-}
-
-.section--primary-lightest {
-  background-color: var(--color-primary-lightest);
   color: var(--color-primary-darkest);
 }

@@ -34,11 +34,14 @@
 /* Work Card */
 .work-card {
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   cursor: pointer;
-  animation: slideInCard 0.5s ease-in forwards;
   opacity: 0;
+}
+
+.work-grid--visible .work-card {
+  animation: slideInCard 0.5s ease-in forwards;
 }
 
 /* Staggered animation for each card */
@@ -88,6 +91,7 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-card-image {
@@ -95,11 +99,14 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
 }
 
 .work-card:hover .work-card-image {
   transform: scale(1.08);
+  opacity: 1;
 }
 
 /* Overlay */
@@ -116,7 +123,7 @@
   justify-content: center;
   padding: var(--spacing-lg);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-card:hover .work-card-overlay {

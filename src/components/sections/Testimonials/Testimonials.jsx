@@ -1,38 +1,29 @@
 import { useState, useEffect } from 'react';
 import './Testimonials.css';
-import { useTestimonials } from '../hooks/useContent';
-import sectionIMG3 from '../assets/Sections/sectionIMG3.png';
+import { useTestimonials, useSectionDecorations } from '../../../hooks/useContent';
 
-// Import testimonial images
-import DianaF from '../assets/Testimonials/DianaF.jpg';
-import GermanS from '../assets/Testimonials/GermanS.jpg';
-import LaimaP from '../assets/Testimonials/LaimaP.jpg';
-import PremK from '../assets/Testimonials/PremK.jpg';
+// Dynamic imports for testimonial images and logos
+const testimonialImages = import.meta.glob('../../../assets/Testimonials/*.{jpg,png}', { eager: true });
+const sectionImages = import.meta.glob('../../../assets/Sections/*.png', { eager: true });
 
-// Import logos
-import CBS from '../assets/Testimonials/CBS.png';
-import AAU from '../assets/Testimonials/AAU.png';
-import VivaBatai from '../assets/Testimonials/VivaBatai.png';
-import CPHU from '../assets/Testimonials/CPHU.png';
-
-const imageMap = {
-  'DianaF.jpg': DianaF,
-  'GermanS.jpg': GermanS,
-  'LaimaP.jpg': LaimaP,
-  'PremK.jpg': PremK
+const getImageSrc = (filename) => {
+  const path = `../../../assets/Testimonials/${filename}`;
+  return testimonialImages[path]?.default || '';
 };
 
-const logoMap = {
-  'CBS.png': CBS,
-  'AAU.png': AAU,
-  'VivaBatai.png': VivaBatai,
-  'CPHU.png': CPHU
+const getSectionImage = (filename) => {
+  const path = `../../../assets/Sections/${filename}`;
+  return sectionImages[path]?.default || '';
 };
 
 export default function Testimonials() {
   const testimonials = useTestimonials();
+  const decorations = useSectionDecorations();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('next');
+
+  const sectionImage3 = getSectionImage(decorations.testimonials);
+  const sectionImage5 = getSectionImage(decorations.testimonials2);
 
   const goToPrevious = () => {
     setDirection('prev');
@@ -58,12 +49,13 @@ export default function Testimonials() {
   if (testimonials.length === 0) return null;
 
   const current = testimonials[currentIndex];
-  const avatarSrc = imageMap[current.avatar];
-  const logoSrc = logoMap[current.logo];
+  const avatarSrc = getImageSrc(current.avatar);
+  const logoSrc = getImageSrc(current.logo);
 
   return (
     <section id="clients" className="section section--light">
-      <img src={sectionIMG3} alt="Section decoration" className="section-decoration section-decoration--left section-decoration-3" />
+      <img src={sectionImage3} alt="Section decoration" className="section-decoration section-decoration-3" />
+      <img src={sectionImage5} alt="Section decoration" className="section-decoration section-decoration-5" />
       <div className="testimonials-container">
         <h2 className="testimonials-title">What People Say</h2>
 
@@ -135,3 +127,4 @@ export default function Testimonials() {
     </section>
   );
 }
+

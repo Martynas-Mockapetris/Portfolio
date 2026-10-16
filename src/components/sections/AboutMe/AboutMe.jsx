@@ -1,9 +1,17 @@
-import Tabs from './common/Tabs';
-import IconButton from './common/IconButton';
+import { useState, useRef, useEffect } from 'react';
+import Tabs from '../../common/Tabs/Tabs';
+import IconButton from '../../common/IconButton/IconButton';
 import './AboutMe.css';
-import { useAboutMe, useSocialLinks, useSkills } from '../hooks/useContent';
-import sectionIMG from '../assets/Sections/sectionIMG.png';
+import { useAboutMe, useSocialLinks, useSkills, useSectionDecorations } from '../../../hooks/useContent';
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+
+// Dynamic imports for section decorations
+const sectionImages = import.meta.glob('../../../assets/Sections/*.png', { eager: true });
+
+const getSectionImage = (filename) => {
+  const path = `../../../assets/Sections/${filename}`;
+  return sectionImages[path]?.default || '';
+};
 
 const iconMap = {
   facebook: FaFacebook,
@@ -14,13 +22,41 @@ const iconMap = {
 export default function AboutMe() {
   const aboutMe = useAboutMe();
   const socialLinks = useSocialLinks();
+  const decorations = useSectionDecorations();
   const toolsSkills = useSkills('tools');
   const frontendSkills = useSkills('frontend');
   const backendSkills = useSkills('backend');
 
+  const sectionImage = getSectionImage(decorations.aboutMe);
+  const skillsRef = useRef(null);
+  const [skillsVisible, setSkillsVisible] = useState(false);
+
+  useEffect(() => {
+    const skillsSection = skillsRef.current;
+
+    if (!skillsSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSkillsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: '-20% 0px -35% 0px',
+        threshold: 0
+      }
+    );
+
+    observer.observe(skillsSection);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="about-me" className="section section--light">
-      <img src={sectionIMG} alt="Section decoration" className="section-decoration section-decoration--left section-decoration-1" />
+      <img src={sectionImage} alt="Section decoration" className="section-decoration section-decoration-1" />
       <div className="about-me-container">
         {/* Title */}
         <h2 className="about-me-title">About Me</h2>
@@ -39,16 +75,7 @@ export default function AboutMe() {
           <div className="social-links social-links--desktop">
             {Object.entries(socialLinks).map(([platform, url]) => {
               const IconComponent = iconMap[platform];
-              return (
-                <IconButton 
-                  key={platform}
-                  icon={IconComponent}
-                  href={url}
-                  title={platform}
-                  size={24}
-                  variant="icon"
-                />
-              );
+              return <IconButton key={platform} icon={IconComponent} href={url} title={platform} size={24} variant="icon" />;
             })}
           </div>
         </div>
@@ -57,22 +84,13 @@ export default function AboutMe() {
         <div className="social-links social-links--mobile">
           {Object.entries(socialLinks).map(([platform, url]) => {
             const IconComponent = iconMap[platform];
-            return (
-              <IconButton 
-                key={platform}
-                icon={IconComponent}
-                href={url}
-                title={platform}
-                size={24}
-                variant="icon"
-              />
-            );
+            return <IconButton key={platform} icon={IconComponent} href={url} title={platform} size={24} variant="icon" />;
           })}
         </div>
       </div>
 
       {/* Skills Tabs - Full Width */}
-      <div className="about-me-skills">
+      <div ref={skillsRef} className={`about-me-skills ${skillsVisible ? 'about-me-skills--visible' : ''}`}>
         <h3 className="skills-title">My Skillset</h3>
         <Tabs
           tabs={[
@@ -83,14 +101,13 @@ export default function AboutMe() {
                   {toolsSkills.map((skill) => (
                     <div key={skill.name} className="skill-item">
                       <div className="skill-header">
-                        <span className="skill-name">{skill.name} <span className="skill-value">{skill.value}/10</span></span>
+                        <span className="skill-name">
+                          {skill.name} <span className="skill-value">{skill.value}/10</span>
+                        </span>
                       </div>
                       <div className="skill-dots">
                         {[...Array(10)].map((_, i) => (
-                          <span 
-                            key={i} 
-                            className={`skill-dot ${i < skill.value ? 'skill-dot--filled' : ''}`}
-                          ></span>
+                          <span key={i} className={`skill-dot ${i < skill.value ? 'skill-dot--filled' : ''}`}></span>
                         ))}
                       </div>
                     </div>
@@ -105,14 +122,13 @@ export default function AboutMe() {
                   {frontendSkills.map((skill) => (
                     <div key={skill.name} className="skill-item">
                       <div className="skill-header">
-                        <span className="skill-name">{skill.name} <span className="skill-value">{skill.value}/10</span></span>
+                        <span className="skill-name">
+                          {skill.name} <span className="skill-value">{skill.value}/10</span>
+                        </span>
                       </div>
                       <div className="skill-dots">
                         {[...Array(10)].map((_, i) => (
-                          <span 
-                            key={i} 
-                            className={`skill-dot ${i < skill.value ? 'skill-dot--filled' : ''}`}
-                          ></span>
+                          <span key={i} className={`skill-dot ${i < skill.value ? 'skill-dot--filled' : ''}`}></span>
                         ))}
                       </div>
                     </div>
@@ -127,14 +143,13 @@ export default function AboutMe() {
                   {backendSkills.map((skill) => (
                     <div key={skill.name} className="skill-item">
                       <div className="skill-header">
-                        <span className="skill-name">{skill.name} <span className="skill-value">{skill.value}/10</span></span>
+                        <span className="skill-name">
+                          {skill.name} <span className="skill-value">{skill.value}/10</span>
+                        </span>
                       </div>
                       <div className="skill-dots">
                         {[...Array(10)].map((_, i) => (
-                          <span 
-                            key={i} 
-                            className={`skill-dot ${i < skill.value ? 'skill-dot--filled' : ''}`}
-                          ></span>
+                          <span key={i} className={`skill-dot ${i < skill.value ? 'skill-dot--filled' : ''}`}></span>
                         ))}
                       </div>
                     </div>

@@ -6,22 +6,22 @@
       "folder": "work-1",
       "shortDesc": "Enterprise technology solution for business optimization",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "A sport based platform based on sports and entertainment experience. Project aimed at enhancing user engagement and providing a comprehensive sports experience. I decided that this will be a good practise to implement my newly learned skills in jekyll framework for this project.",
+      "techstack": "Jekyll, HTML, CSS, JavaScript",
+      "challenge": "I chose this website to test my skills in making this project more user friendly and better code structure. Main challange was to create a fundamental structure that could support dynamic content and interactive features. This project challanged me to create a more lightweight version of this project that would load faster and provide a smoother user experience. After a deeper investigation of existing code I managed to find quite some code that was either working incorrectly or was never used before.",
+      "results": "After implementing the new structure and optimizations, the platform experienced improved load times, smoother interactions.",
       "gallery": ["1.jpg", "2.jpg", "3.jpg"]
     },
     {
       "id": "work-2",
       "name": "SkillBridge",
       "folder": "work-2",
-      "shortDesc": "E-learning platform connecting students with mentors",
+      "shortDesc": "Freelancer marketplace connecting talented professionals with clients",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "This is my proudest project that I am currenlly working on. I decided to create a complex challange where I could easily let my creativity flow and showcase my knowledge in React and MERN stack for building a robust freelancer marketplace. During the process, I forced myself to move from a one landing page to a multi-page application that later turned out to become a complete ecosystem with uniqe CMS. I managed to create a complex and fully functioning tasks that allow admins to manage most of the platforms content, users to freely create accounts, connec and communicate with each other, offer their knowledge or simply create an opportunity announcement.",
+      "techstack": "React, Node.js, Express, MongoDB, HTML, CSS, JavaScript, JWT, Github",
+      "challenge": "The main challenge was to design a scalable architecture that could handle multiple types of users and complex interactions between them. Ensuring data consistency and security while providing a seamless user experience was a significant hurdle. More challanges were araising each day as only limitation was my own imagination. Each new addition to this project created additional complexities that needed to be addressed carefully during development.",
+      "results": "The platform allows users to freely communicate between other platform users, allow them to connect and negotiate opportunities effectively. Admins have comprehensive control over the platform's content and user management, ensuring a well-maintained and secure environment. Content creators also have a freedom to create blog posts to make platform users more engaged to the platform",
       "gallery": ["1.png", "2.png", "3.png"]
     },
     {
@@ -30,10 +30,10 @@
       "folder": "work-3",
       "shortDesc": "Hotel booking and management system for Manaus hospitality",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "Its a simple hotel booking and management system designed for the hospitality industry in Manaus. The main focus was to challange myself in trying to recreate an exisintg project concept using different technologies and approaches. This project was mainly chosed due to some complex approaches that I wanted to tackle and see if I am able to solve them or find suitable solutions.",
+      "techstack": "React, CSS, Tailwind CSS, JavaScript, HTML, Github",
+      "challenge": "Challange was to implement my fresh React skills into practice to see how effectively I could build a functional hotel booking and management system from scratch using common React patterns and best practices.",
+      "results": "This was my most successful attempt at creating a fully functional frontend project using React and tailwind. This also helped me to expand my knowledge in creative solutions and more beautiful UI designs that I try to implement to this day.",
       "gallery": ["1.png", "2.png", "3.png"]
     },
     {
@@ -42,10 +42,10 @@
       "folder": "work-4",
       "shortDesc": "Movie database application with advanced search and filtering",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "Probably the most classic challange given to every fresh student that tries to learn web development. I was eager to try working with APIs and see how I could integrate them into a functional movie database application with my own spice of UI. This was also my first work with localstorage that started to give me basics of how data works and to think how to create efficient data management strategies.",
+      "techstack": "React, CSS, JavaScript, HTML, TMDB API, Github",
+      "challenge": "The main challange was the API, how can I extract information from something that I do not see right in front of my screen. I had to learn how to read API via its documentations and how can I use someone elses data to be presented on my own application. But working with just applications became boring, so it was a great opportunity to begin working with local storage that helped to imitate database of my favorite movies and make application more dynamic.",
+      "results": "This project helped me to understand how to work with APIs and local storage effectively. I gained valuable experience in managing data flow within a React application and improved my skills in creating dynamic and interactive user interfaces.",
       "gallery": ["1.png", "2.png", "3.png"]
     },
     {
@@ -54,10 +54,10 @@
       "folder": "work-5",
       "shortDesc": "Personal finance management and expense tracking application",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "Working with React opened my eyes and best knowledge integration is through constant work and practice. I opened my phone, went through my apps and saw that I am paying for an app that I felt like I can recreate. Thats how my challange began. Initially I thought I can create a notebook type of finance tracker, but in the run, I though 'Where is the security, I need to store this date safely so it would not be lost' and decided to work that out by creating a login system, storing my finances in database in a secure manner and ensuring that my data is protected at all times.",
+      "techstack": "React, HTML, CSS, JavaScript, MongoDB, BrowserRouter, ProtectedRoutes, Github",
+      "challenge": "The main challenge was ensuring the security and integrity of the financial data. I had to implement a secure login system, manage data storage in a database, and make sure that the application could handle sensitive information safely.",
+      "results": "This project helped me to understand the importance of data security and how to implement it effectively in a web application. I gained experience in working with databases, authentication systems, and secure data management practices.",
       "gallery": ["1.png", "2.png", "3.png"]
     },
     {
@@ -66,10 +66,10 @@
       "folder": "work-6",
       "shortDesc": "Version control system thesis project with collaborative features",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "My most challanging working that I had to deal with. This was my first MERN project that I had to work with in a team. Due to my persistence and dedication, I was thrown into a challange where I had to manage a team of 6 people and coordinate our efforts to successfully complete the project. The main idea of this project was to create a scalable tool rental platform that allows customers to rent tools all over country. It had to work flawlesly and ensure that rented tools could not be rerented or overlapped during rental times, all data stored within a complex database that would store all information starting from user registration information, to tool details, rental history and paymenet records.",
+      "techstack": "React, HTML, CSS, JavaScript, MongoDB, Express, Node.js, BrowserRouter, ProtectedRoutes, Tailwind CSS, Github",
+      "challenge": "The main challenge was coordinating a team of 6 people while ensuring the project met all functional requirements. I had to manage team communication, task delegation, and integration of various components into a cohesive system. At start it was difficult, but shortly I learned how to effectively divide work across team members quickly learning their individual competencies. During the work I was responsible that all team members are performing and if something is struggling I have to step in and try to solve the issue either by guiding them or taking over temporarily. While performing on this project, I managed to learn valuable lessons in leadership, problem-solving, and effective team collaboration. This also deepened my knowledge in databases, complex application structures and overall project management.",
+      "results": "Within first week of this project it was clear that minimal requirements are met and team members were allowed to focus on additional features and improvements, leading to a more robust and feature-complete application by the end of the project. This helped to create a well built platform that existing companies that are specializing in tool rentals could adapt this application for their own use.",
       "gallery": ["1.png", "2.png", "3.png"]
     },
     {
@@ -78,10 +78,10 @@
       "folder": "work-7",
       "shortDesc": "Modern corporate website for business presence and lead generation",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "A basic website used to sharpen and learn new features and techniques in web development. Its a pure static website that used basics of a modern web development stack including HTML, CSS, and JavaScript.",
+      "techstack": "HTML, CSS, JavaScript",
+      "challenge": "Main challange here was to create a clean code website that follows best practices and is easy to maintain. I wanted to dive deeper into more complex CSS classes and layout techniques to enhance the visual appeal and responsiveness of the website.",
+      "results": "The result was a clean, responsive, and visually appealing static website that demonstrated my understanding of modern web development practices.",
       "gallery": ["1.png", "2.png", "3.png"]
     },
     {
@@ -90,10 +90,10 @@
       "folder": "work-8",
       "shortDesc": "Previous portfolio version showcasing earlier design evolution",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "This version of my portfolio showcases the earlier design and layout choices I made before arriving at the current version. It served as a learning platform for experimenting with different UI elements and design patterns.",
+      "techstack": "HTML, Jekyll, CSS, JavaScript, Skeleton, YAML, Github",
+      "challenge": "Challange was to use my knowledge of that time to create a functional website that can represent my skills and personal brand to potential employers and clients.",
+      "results": "The result was a functional and visually coherent portfolio website that effectively represented my skills and personal brand at that time.",
       "gallery": ["1.png", "2.png", "3.png"]
     },
     {
@@ -102,10 +102,10 @@
       "folder": "work-9",
       "shortDesc": "Current React-based portfolio with modern architecture and design",
       "thumbnail": "thumb.png",
-      "description": "Description",
-      "techstack": "Techstack",
-      "challenge": "Challenge",
-      "results": "Results",
+      "description": "This is the current version of my personal portfolio, built using React. It features a modern architecture, responsive design, and showcases my latest projects and skills. Project layout is similar to my previous portfolio version, but it uses React components and modern front-end development practices.",
+      "techstack": "React, HTML, CSS, JavaScript, Github",
+      "challenge": "The main challenge was to create a modern, responsive portfolio that effectively showcases my skills and projects while maintaining a clean and visually appealing design. It was hard to determine what is modern and yet simple, so I decided to go minimalistic with the overall design, taking majority of my previous creation and yet implementing some new tiny details that uplifted entire look and feel of the portfolio.",
+      "results": "The result is a polished, responsive, and visually appealing portfolio that effectively highlights my skills, projects, and personal brand. During creation it showed me that I went through a lot of projects that I can proudly showcase in my portfolio and that I have a solid foundation in front-end development.",
       "gallery": ["1.png", "2.png", "3.png"]
     }
   ]

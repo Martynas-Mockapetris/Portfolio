@@ -87,15 +87,6 @@ export function useSocialLinks() {
  *
  * @returns {Object} Contact section (form fields, messages, etc.)
  */
-export function useContact() {
-  return content.contact;
-}
-
-/**
- * Hook to access contact data (alias for useContact)
- *
- * @returns {Object} Contact section data
- */
 export function useContactData() {
   return content.contact;
 }
@@ -105,15 +96,15 @@ export function useContactData() {
  *
  * @returns {Object} Footer data (copyright, links, etc.)
  */
-export function useFooter() {
+export function useFooterData() {
   return content.footer;
 }
 
 /**
- * Hook to access footer data (alias for useFooter)
+ * Hook to access section decoration images
  *
- * @returns {Object} Footer data
+ * @returns {Object} Section decoration filenames
  */
-export function useFooterData() {
-  return content.footer;
+export function useSectionDecorations() {
+  return content.sectionDecorations || {};
 }

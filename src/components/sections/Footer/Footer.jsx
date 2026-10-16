@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import './Footer.css';
-import { useSocialLinks, useFooterData } from '../hooks/useContent';
-import IconButton from './common/IconButton';
+import { useSocialLinks, useFooterData } from '../../../hooks/useContent';
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const iconMap = {
@@ -116,3 +114,4 @@ export default function Footer() {
     </footer>
   );
 }
+

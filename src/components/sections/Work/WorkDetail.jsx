@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './WorkDetail.css';
 
-const galleryModules = import.meta.glob('../assets/Work/**/*.{jpg,png}', { eager: true });
+const galleryModules = import.meta.glob('../../../assets/Work/**/*.{jpg,png}', { eager: true });
 
 const getGalleryImage = (folder, filename) => {
-  const path = `../assets/Work/${folder}/${filename}`;
+  const path = `../../../assets/Work/${folder}/${filename}`;
   return galleryModules[path]?.default || '';
 };
 
@@ -105,3 +105,4 @@ export default function WorkDetail({ project, onBack }) {
     </div>
   );
 }
+
