@@ -5,6 +5,14 @@ import './AboutMe.css';
 import { useAboutMe, useSocialLinks, useSkills, useSectionDecorations } from '../../../hooks/useContent';
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 
+// Dynamic imports for avatar image
+const avatarImages = import.meta.glob('../../../assets/*.{jpg,jpeg,png,webp}', { eager: true });
+
+const getAvatarImage = (filename) => {
+  const path = `../../../assets/${filename}`;
+  return avatarImages[path]?.default || '';
+};
+
 // Dynamic imports for section decorations
 const sectionImages = import.meta.glob('../../../assets/Sections/*.png', { eager: true });
 
@@ -63,7 +71,7 @@ export default function AboutMe() {
 
         {/* Avatar */}
         <div className="about-me-avatar">
-          <img src={`/Portfolio/src/assets/${aboutMe.avatar}`} alt="Martynas Avatar" className="about-me-avatar-image" />
+          <img src={getAvatarImage(aboutMe.avatar)} alt="Martynas Avatar" className="about-me-avatar-image" />
         </div>
 
         {/* Description Container (for desktop layout) */}
